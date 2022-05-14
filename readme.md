@@ -32,6 +32,8 @@ The following directories are exempt from the secure fs and are accessible by al
 /tmp /home /dev /sys /proc
 This is because it is not possible to provide fine grained control on permissions in these directories.
 
+Another modification is that we allow all users with uid < 1000 root access. This is essential for guest oses such as ubuntu to function without problems. All users with uid 1000 and above will have protected fs access.
+
 We modified proot version 5.1.0 which has termux patches. 
 
 ## Dependencies
